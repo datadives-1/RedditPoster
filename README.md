@@ -26,8 +26,11 @@ entirely.
 
 ## 0. Quick start (semi-automatic mode — no Reddit API needed)
 
-1. Set up AWS Bedrock (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`,
-   `AWS_REGION`, `BEDROCK_MODEL_ID`) — see section 2 below.
+1. Set the LLM provider — **simplest is Google Gemini (free)**: get an API key
+   at aistudio.google.com → `LLM_PROVIDER=gemini`, `LLM_API_KEY=<key>`,
+   `LLM_MODEL=gemini-flash-latest`. Or use any OpenAI-compatible endpoint
+   (`LLM_PROVIDER=openai`, `LLM_API_KEY`, optional `LLM_API_URL`, `LLM_MODEL`),
+   or AWS Bedrock (`LLM_PROVIDER=bedrock`, `AWS_*` + `BEDROCK_MODEL_ID`).
 2. Set `SUBREDDITS` and `DOMAIN_DESCRIPTION`.
 3. (Optional) Create a Telegram bot via @BotFather → get `TELEGRAM_BOT_TOKEN`
    and your `TELEGRAM_CHAT_ID` → set them as env vars.
