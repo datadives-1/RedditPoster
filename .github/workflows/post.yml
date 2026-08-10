@@ -1,0 +1,65 @@
+name: Daily Reddit Poster
+
+on:
+  schedule:
+    # Times are UTC, spaced through the day so 5 posts/day land at plausible
+    # human hours and stay well separated. Combined with the script's random
+    # jitter (default up to 15 min), actual posting time varies each day.
+    - cron: "45 2 * * *"  # ~8:45 AM IST
+    - cron: "20 6 * * *"  # ~11:50 AM IST
+    - cron: "0 10 * * *"  # ~3:30 PM IST
+    - cron: "15 14 * * *" # ~7:45 PM IST
+    - cron: "30 17 * * *" # ~11:00 PM IST
+  workflow_dispatch: {}    # lets you manually trigger a test run from the Actions tab
+
+permissions:
+  contents: write   # needed so the workflow can commit history.json back
+
+# Only ever run one post job at a time: prevents a cron run and a manual
+# workflow_dispatch run from posting twice and fighting over the same
+# commit/push.
+concurrency:
+  group: daily-reddit-poster
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate and submit post
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_REFRESH_TOKEN: ${{ secrets.REDDIT_REFRESH_TOKEN }}
+          REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
+          SUBREDDITS: ${{ secrets.SUBREDDITS }}
+          SUBREDDIT_FLAIRS: ${{ secrets.SUBREDDIT_FLAIRS }}   # optional
+          DOMAIN_DESCRIPTION: ${{ secrets.DOMAIN_DESCRIPTION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          BEDROCK_MODEL_ID: ${{ secrets.BEDROCK_MODEL_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}  # optional
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}      # optional
+          MAX_JITTER_MINUTES: "15"
+        run: python main.py
+
+      - name: Commit updated history
+        run: |
+          git config user.name "reddit-poster-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add history.json
+          git diff --quiet --cached || git commit -m "Update post history [skip ci]"
+          git pull --rebase
+          git push
