@@ -9,16 +9,10 @@ second safety net.
 import os
 import random
 import re
-import time
 import difflib
 from collections import Counter
 
-import boto3
-from botocore.exceptions import BotoCoreError, ClientError
-
-AWS_REGION = os.environ.get("AWS_REGION", "us-east-1")
-# amazon.nova-micro-v1:0 (cheapest/fastest) | amazon.nova-lite-v1:0 (default) | amazon.nova-pro-v1:0 (best quality)
-BEDROCK_MODEL_ID = os.environ.get("BEDROCK_MODEL_ID", "amazon.nova-lite-v1:0")
+import llm
 
 DOMAIN_DESCRIPTION = os.environ.get(
     "DOMAIN_DESCRIPTION",
@@ -48,20 +42,6 @@ POST_ANGLES = [
 AVOID_LAST_ANGLES = 3
 ANGLE_WEIGHT_WINDOW = 10
 
-# Throttling/service hiccups are worth retrying with backoff; anything else
-# (bad creds, content policy, missing model access) should fail fast.
-_RETRYABLE_CODES = {
-    "ThrottlingException",
-    "Throttling",
-    "TooManyRequestsException",
-    "InternalServerException",
-    "ServiceUnavailable",
-    "ModelTimeoutException",
-    "ModelStreamErrorException",
-}
-_RETRYABLE_STATUS = {429, 500, 503}
-
-bedrock = boto3.client("bedrock-runtime", region_name=AWS_REGION)
 TITLE_BODY_RE = re.compile(
     r"#{0,6}\s*title\s*:\s*(.*?)\s*#{0,6}\s*body\s*:", re.IGNORECASE | re.DOTALL
 )
@@ -98,34 +78,9 @@ BODY: <post body, 2-5 short paragraphs>
 """
 
 
-def _is_retryable(exc: ClientError) -> bool:
-    error = exc.response.get("Error", {})
-    code = error.get("Code", "")
-    status = exc.response.get("ResponseMetadata", {}).get("HTTPStatusCode")
-    return code in _RETRYABLE_CODES or status in _RETRYABLE_STATUS
-
-
-def _call_nova(prompt: str, max_attempts: int = 4) -> str:
-    """Call Bedrock with retry + exponential backoff on throttling/5xx."""
-    last_error = None
-    for attempt in range(max_attempts):
-        try:
-            response = bedrock.converse(
-                modelId=BEDROCK_MODEL_ID,
-                messages=[{"role": "user", "content": [{"text": prompt}]}],
-                inferenceConfig={"maxTokens": 1024, "temperature": 1.0},
-            )
-            return response["output"]["message"]["content"][0]["text"].strip()
-        except ClientError as exc:
-            if not _is_retryable(exc) or attempt == max_attempts - 1:
-                raise
-            last_error = exc
-        except BotoCoreError:
-            if attempt == max_attempts - 1:
-                raise
-            last_error = None
-        time.sleep(2 ** (attempt + 1))
-    raise last_error  # pragma: no cover - only reached if max_attempts == 0
+def _call_llm(prompt: str) -> str:
+    """Route the prompt to the configured LLM provider (see llm.py)."""
+    return llm.generate(prompt)
 
 
 def generate_unique_post(recent_posts, max_attempts: int = 5):
@@ -150,7 +105,7 @@ def generate_unique_post(recent_posts, max_attempts: int = 5):
         angle = random.choices(angle_pool, weights=weights, k=1)[0]
         prompt = _build_prompt(recent_titles[:15], angle)
 
-        text = _call_nova(prompt)
+        text = _call_llm(prompt)
         title, body = _parse_post(text)
         if not title or not body:
             continue
