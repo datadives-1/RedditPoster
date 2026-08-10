@@ -2,22 +2,21 @@ name: Daily Reddit Poster
 
 on:
   schedule:
-    # Times are UTC, spaced through the day so 5 posts/day land at plausible
-    # human hours and stay well separated. Combined with the script's random
-    # jitter (default up to 15 min), actual posting time varies each day.
-    - cron: "45 2 * * *"  # ~8:45 AM IST
-    - cron: "20 6 * * *"  # ~11:50 AM IST
-    - cron: "0 10 * * *"  # ~3:30 PM IST
-    - cron: "15 14 * * *" # ~7:45 PM IST
-    - cron: "30 17 * * *" # ~11:00 PM IST
+    # Times are UTC; posts are drafted on GitHub's servers so your PC can be
+    # off/asleep — you just get Telegram notifications with the post links.
+    # 5 runs/day, spaced through the day.
+    - cron: "15 3 * * *"   # ~8:45 AM IST
+    - cron: "20 6 * * *"   # ~11:50 AM IST
+    - cron: "0 10 * * *"   # ~3:30 PM IST
+    - cron: "15 14 * * *"  # ~7:45 PM IST
+    - cron: "30 17 * * *"  # ~11:00 PM IST
   workflow_dispatch: {}    # lets you manually trigger a test run from the Actions tab
 
 permissions:
   contents: write   # needed so the workflow can commit history.json back
 
-# Only ever run one post job at a time: prevents a cron run and a manual
-# workflow_dispatch run from posting twice and fighting over the same
-# commit/push.
+# Only ever run one job at a time: prevents overlapping runs from fighting
+# over the same commit/push.
 concurrency:
   group: daily-reddit-poster
   cancel-in-progress: false
@@ -37,23 +36,16 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Generate and submit post
+      - name: Generate draft and notify
         env:
-          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
-          REDDIT_REFRESH_TOKEN: ${{ secrets.REDDIT_REFRESH_TOKEN }}
-          REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
+          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
           SUBREDDITS: ${{ secrets.SUBREDDITS }}
-          SUBREDDIT_FLAIRS: ${{ secrets.SUBREDDIT_FLAIRS }}   # optional
           DOMAIN_DESCRIPTION: ${{ secrets.DOMAIN_DESCRIPTION }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ secrets.AWS_REGION }}
-          BEDROCK_MODEL_ID: ${{ secrets.BEDROCK_MODEL_ID }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}  # optional
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}      # optional
-          MAX_JITTER_MINUTES: "15"
-        run: python main.py
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python draft.py --no-open
 
       - name: Commit updated history
         run: |

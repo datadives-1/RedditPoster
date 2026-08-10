@@ -20,7 +20,7 @@ import urllib.error
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
 
-AWS_REGION = os.environ.get("AWS_REGION", "us-east-1")
+AWS_REGION = os.environ.get("AWS_REGION") or "us-east-1"
 BEDROCK_MODEL_ID = os.environ.get("BEDROCK_MODEL_ID", "amazon.nova-lite-v1:0")
 
 _RETRYABLE_CODES = {
