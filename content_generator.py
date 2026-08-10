@@ -46,6 +46,25 @@ TITLE_BODY_RE = re.compile(
     r"#{0,6}\s*title\s*:\s*(.*?)\s*#{0,6}\s*body\s*:", re.IGNORECASE | re.DOTALL
 )
 
+# Safety net: reject anything that still looks like a template/placeholder
+# even if the model ignored the prompt rule. Matches [insert ...], [your ...],
+# YOUR_XXX, TODO, "…something here", etc.
+_PLACEHOLDER_RE = re.compile(
+    r"\[[^\]]*(?:insert|replace|your|enter|put|placeholder|example|something"
+    r"|niche|topic|name)[^\]]*\]"
+    r"|\([^)]*(?:insert|placeholder|your (?:name|company|product|tool|app)|"
+    r"add .* (?:here|below))[^)]*\)"
+    r"|\bYOUR_[A-Z_]+\b|\bREPLACE_ME\b|\bTODO\b|\bXXX\b",
+    re.IGNORECASE,
+)
+_PLACEHOLDER_BRACKET_RE = re.compile(r"\[[A-Za-z]?\]|\b\[X(?:XX)?\]\b")
+
+
+def _has_placeholder(text: str) -> bool:
+    return bool(
+        _PLACEHOLDER_RE.search(text) or _PLACEHOLDER_BRACKET_RE.search(text)
+    )
+
 
 def _similarity(a: str, b: str) -> float:
     return difflib.SequenceMatcher(None, a.lower(), b.lower()).ratio()
@@ -58,6 +77,9 @@ def _build_prompt(recent_titles, angle):
 Write ONE Reddit post using this angle: {angle}
 
 Rules:
+- The post is FINAL and publishable as-is. Never use placeholders, brackets,
+  or meta-instructions like [insert niche here], [Your Name], [X], YOUR_COMPANY,
+  TODO, or "(add something here)" — write every detail concretely yourself.
 - Sound like a real person casually posting, not a marketer or a bot.
 - Do NOT include any links or mention any website/portfolio URL in the body.
 - Do NOT use marketing language, hashtags, or emoji spam.
@@ -108,6 +130,8 @@ def generate_unique_post(recent_posts, max_attempts: int = 5):
         text = _call_llm(prompt)
         title, body = _parse_post(text)
         if not title or not body:
+            continue
+        if _has_placeholder(title) or _has_placeholder(body):
             continue
 
         too_similar = any(
