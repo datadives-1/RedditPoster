@@ -50,7 +50,7 @@ def _call_bedrock(prompt: str) -> str:
     response = client.converse(
         modelId=BEDROCK_MODEL_ID,
         messages=[{"role": "user", "content": [{"text": prompt}]}],
-        inferenceConfig={"maxTokens": 1024, "temperature": 1.0},
+        inferenceConfig={"maxTokens": 1024, "temperature": 0.7},
     )
     return response["output"]["message"]["content"][0]["text"].strip()
 

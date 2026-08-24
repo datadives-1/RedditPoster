@@ -10,7 +10,12 @@ on:
     - cron: "0 10 * * *"   # ~3:30 PM IST
     - cron: "15 14 * * *"  # ~7:45 PM IST
     - cron: "30 17 * * *"  # ~11:00 PM IST
-  workflow_dispatch: {}    # lets you manually trigger a test run from the Actions tab
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Number of drafts to generate'
+        default: '1'
+        required: false
 
 permissions:
   contents: write   # needed so the workflow can commit history.json back
@@ -45,7 +50,7 @@ jobs:
           DOMAIN_DESCRIPTION: ${{ secrets.DOMAIN_DESCRIPTION }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python draft.py --no-open
+        run: python draft.py --no-open --count ${{ github.event.inputs.count || '1' }}
 
       - name: Commit updated history
         run: |
