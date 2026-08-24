@@ -100,7 +100,7 @@ def _call_gemini(prompt: str) -> str:
 
 def generate(prompt: str, max_attempts: int = 4) -> str:
     """Call the configured LLM provider with retry + exponential backoff."""
-    provider = os.environ.get("LLM_PROVIDER", "bedrock").lower()
+    provider = (os.environ.get("LLM_PROVIDER") or "bedrock").strip().lower()
     if provider == "bedrock":
         call = _call_bedrock
     elif provider == "openai":
