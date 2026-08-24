@@ -20,8 +20,10 @@ import urllib.error
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
 
+import socket
+
 AWS_REGION = os.environ.get("AWS_REGION") or "us-east-1"
-BEDROCK_MODEL_ID = os.environ.get("BEDROCK_MODEL_ID", "amazon.nova-lite-v1:0")
+BEDROCK_MODEL_ID = os.environ.get("BEDROCK_MODEL_ID", "amazon.nova-pro-v1:0")
 
 _RETRYABLE_CODES = {
     "ThrottlingException",
@@ -32,7 +34,7 @@ _RETRYABLE_CODES = {
     "ModelTimeoutException",
     "ModelStreamErrorException",
 }
-_RETRYABLE_STATUS = {429, 500, 503}
+_RETRYABLE_STATUS = {408, 429, 500, 502, 503, 504}
 
 
 def _is_retryable_error(exc: Exception) -> bool:
@@ -42,7 +44,9 @@ def _is_retryable_error(exc: Exception) -> bool:
         return error.get("Code", "") in _RETRYABLE_CODES or status in _RETRYABLE_STATUS
     if isinstance(exc, urllib.error.HTTPError):
         return exc.code in _RETRYABLE_STATUS
-    return isinstance(exc, (BotoCoreError, urllib.error.URLError))
+    if isinstance(exc, (TimeoutError, socket.timeout, urllib.error.URLError, BotoCoreError, OSError)):
+        return True
+    return False
 
 
 def _call_bedrock(prompt: str) -> str:
@@ -116,11 +120,10 @@ def generate(prompt: str, max_attempts: int = 4) -> str:
     for attempt in range(max_attempts):
         try:
             return call(prompt)
-        except (ClientError, BotoCoreError, urllib.error.HTTPError, urllib.error.URLError, ValueError) as exc:
+        except Exception as exc:
             if isinstance(exc, ValueError) or not _is_retryable_error(exc) or attempt == max_attempts - 1:
                 raise
             last_error = exc
-        except Exception:
-            raise
         time.sleep(2 ** (attempt + 1))
-    raise last_error  # pragma: no cover - only reached if max_attempts == 0
+    if last_error:
+        raise last_error

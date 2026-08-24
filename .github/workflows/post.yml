@@ -44,6 +44,10 @@ jobs:
       - name: Generate draft and notify
         env:
           LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION || 'us-east-1' }}
+          BEDROCK_MODEL_ID: ${{ secrets.BEDROCK_MODEL_ID || 'amazon.nova-pro-v1:0' }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
           SUBREDDITS: ${{ secrets.SUBREDDITS }}
