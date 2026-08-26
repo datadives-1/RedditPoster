@@ -1,5 +1,14 @@
 [
   {
+    "title": "PSA: The Hidden Power of \"Cmd+Shift+5\" for AI Workflows",
+    "body": "Hey all, got a tiny but game-changing tip for those of you deep in the weeds of designing AI-powered tools. Ever found yourself needing to quickly screenshot a specific area for a design mockup or to capture an error in your UI? Most folks know about Cmd+Shift+4 for selecting an area, but have you tried Cmd+Shift+5? This little-known shortcut opens up a toolbar with options to record your screen, capture a window, or snag a selected portion with a timer. It's been a lifesaver for me when I need to demo a glitch or show a UI flow in a presentation. Give it a whirl next time you're in a pinch\u2014it might just become your new best friend. What other hidden shortcuts have you guys discovered that made your workflow smoother?",
+    "subreddit": "web_design",
+    "angle": "share a small, weirdly specific tip that most people don't know, framed as 'PSA'",
+    "url": "https://www.reddit.com/r/web_design/submit?title=PSA%3A+The+Hidden+Power+of+%22Cmd%2BShift%2B5%22+for+AI+Workflows&text=Hey+all%2C+got+a+tiny+but+game-changing+tip+for+those+of+you+deep+in+the+weeds+of+designing+AI-powered+tools.+Ever+found+yourself+needing+to+quickly+screenshot+a+specific+area+for+a+design+mockup+or+to+capture+an+error+in+your+UI%3F+Most+folks+know+about+Cmd%2BShift%2B4+for+selecting+an+area%2C+but+have+you+tried+Cmd%2BShift%2B5%3F+This+little-known+shortcut+opens+up+a+toolbar+with+options+to+record+your+screen%2C+capture+a+window%2C+or+snag+a+selected+portion+with+a+timer.+It%27s+been+a+lifesaver+for+me+when+I+need+to+demo+a+glitch+or+show+a+UI+flow+in+a+presentation.+Give+it+a+whirl+next+time+you%27re+in+a+pinch%E2%80%94it+might+just+become+your+new+best+friend.+What+other+hidden+shortcuts+have+you+guys+discovered+that+made+your+workflow+smoother%3F&selftext=true",
+    "status": "drafted",
+    "timestamp": 1787740834
+  },
+  {
     "title": "When Adding \"Just One More Feature\" Nearly Sank Our AI Project",
     "body": "A few months ago, we were neck-deep in building an AI-powered content recommendation engine for a client. Everything was going smoothly until one of our team members suggested adding a \"related articles\" feature. It sounded simple enough\u2014just another API call and some UI tweaks, right?\n\nWrong. That \"small addition\" turned into a two-week detour. The API we chose had rate limits we hadn't accounted for, and the UI changes required more backend adjustments than we anticipated. What should have been a quick win nearly delayed our entire project.\n\nIn hindsight, the lesson is clear: be wary of feature creep, even when it seems like a no-brainer. It's easy to get caught up in making something \"just a little bit better.\" Has anyone else had a similar experience? How do you draw the line on feature requests?",
     "subreddit": "FrontendDev",
