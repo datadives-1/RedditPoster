@@ -1,5 +1,14 @@
 [
   {
+    "title": "Need a Fresh Pair of Eyes on Your Portfolio? Let's Chat",
+    "body": "Hey everyone,\n\nI've been diving deep into designing and building AI-powered products for a while now, and I thought it might be cool to give back to the community. If anyone's got a portfolio, website, or just a design they're working on and could use a mini-critique, drop a comment below. I'll take a look and share some thoughts.\n\nI'm not promising a full-blown review, but I can offer some quick insights based on what I've learned from shipping AI tools and SaaS products. Whether it's UX flow, visual hierarchy, or just general tips to make your work stand out, I'm here to help.\n\nJust reply with a brief description of what you're working on and any specific areas you're unsure about. Let's make something great together. What are you currently stuck on in your design process?",
+    "subreddit": "web_design",
+    "angle": "offer a free mini-critique of anyone's portfolio, site, or design in the comments \u2014 they reply, you critique",
+    "url": "https://www.reddit.com/r/web_design/submit?title=Need+a+Fresh+Pair+of+Eyes+on+Your+Portfolio%3F+Let%27s+Chat&text=Hey+everyone%2C%0A%0AI%27ve+been+diving+deep+into+designing+and+building+AI-powered+products+for+a+while+now%2C+and+I+thought+it+might+be+cool+to+give+back+to+the+community.+If+anyone%27s+got+a+portfolio%2C+website%2C+or+just+a+design+they%27re+working+on+and+could+use+a+mini-critique%2C+drop+a+comment+below.+I%27ll+take+a+look+and+share+some+thoughts.%0A%0AI%27m+not+promising+a+full-blown+review%2C+but+I+can+offer+some+quick+insights+based+on+what+I%27ve+learned+from+shipping+AI+tools+and+SaaS+products.+Whether+it%27s+UX+flow%2C+visual+hierarchy%2C+or+just+general+tips+to+make+your+work+stand+out%2C+I%27m+here+to+help.%0A%0AJust+reply+with+a+brief+description+of+what+you%27re+working+on+and+any+specific+areas+you%27re+unsure+about.+Let%27s+make+something+great+together.+What+are+you+currently+stuck+on+in+your+design+process%3F&selftext=true",
+    "status": "drafted",
+    "timestamp": 1788025434
+  },
+  {
     "title": "PSA: The Secret Power of \"Alt+Drag\" in Your Design Tool",
     "body": "Hey everyone, quick tip that might save you some time and frustration. Ever found yourself needing to duplicate an element in your design tool, but also needing to move it at the same time? Most people just copy-paste and then move, right? There's a quicker way. Hold down \"Alt\" (or \"Option\" on Mac) and drag the element. This will duplicate it on the fly. \n\nI stumbled upon this by accident a couple of years ago and it's become a game-changer for me, especially when I'm rapidly prototyping or making last-minute tweaks. It's one of those small things that, once you know it, you wonder how you ever lived without it. \n\nWhat other hidden gems have you discovered in your go-to design or development tools? Share your tips below!",
     "subreddit": "css",
