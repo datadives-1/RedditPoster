@@ -1,5 +1,14 @@
 [
   {
+    "title": "Best Practices for User Onboarding in AI-Powered SaaS?",
+    "body": "Hey everyone,\n\nI've been working on an AI-driven SaaS product lately and I'm hitting a bit of a wall with user onboarding. We've got some pretty cool features, but I'm finding that users are struggling to get up to speed quickly. I\u2019ve tried a few different approaches\u2014tutorials, tooltips, and even a chatbot guide\u2014but nothing seems to really click.\n\nDoes anyone have experience with creating effective onboarding flows specifically for AI-powered tools? What strategies worked best for you in terms of guiding users through the initial setup without overwhelming them? Any tips or examples you can share would be super helpful. Thanks!",
+    "subreddit": "startups",
+    "angle": "ask a genuine question to the subreddit about a challenge in this field",
+    "url": "https://www.reddit.com/r/startups/submit?title=Best+Practices+for+User+Onboarding+in+AI-Powered+SaaS%3F&text=Hey+everyone%2C%0A%0AI%27ve+been+working+on+an+AI-driven+SaaS+product+lately+and+I%27m+hitting+a+bit+of+a+wall+with+user+onboarding.+We%27ve+got+some+pretty+cool+features%2C+but+I%27m+finding+that+users+are+struggling+to+get+up+to+speed+quickly.+I%E2%80%99ve+tried+a+few+different+approaches%E2%80%94tutorials%2C+tooltips%2C+and+even+a+chatbot+guide%E2%80%94but+nothing+seems+to+really+click.%0A%0ADoes+anyone+have+experience+with+creating+effective+onboarding+flows+specifically+for+AI-powered+tools%3F+What+strategies+worked+best+for+you+in+terms+of+guiding+users+through+the+initial+setup+without+overwhelming+them%3F+Any+tips+or+examples+you+can+share+would+be+super+helpful.+Thanks%21&selftext=true",
+    "status": "drafted",
+    "timestamp": 1788119711
+  },
+  {
     "title": "Handling Unpredictable Data in AI Workflows: Your Solutions?",
     "body": "I've been working on an AI-powered recommendation engine for a client, and we've hit a snag with data unpredictability. The engine pulls data from various sources, but the formats and structures can change unexpectedly. This inconsistency causes our workflow to break, leading to delays and manual fixes.\n\nDiscovering this issue was a bit of a headache. Initially, we thought the problem was with the AI model, but after some digging, we realized it was the fluctuating data inputs. We tried standardizing the data formats upfront, but that only worked temporarily. The sources kept changing, and our fixes became a game of whack-a-mole.\n\nWhat finally worked for us was implementing a more dynamic data preprocessing step that adapts to changes in real-time. It's not perfect, but it's significantly reduced the number of times we need to intervene. \n\nHow do you handle unpredictable data in your AI workflows? Any tips or tools that have worked for you?",
     "subreddit": "userexperience",
