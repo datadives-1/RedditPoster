@@ -1,5 +1,14 @@
 [
   {
+    "title": "Need Advice on Balancing Model Complexity and Performance in AI Products",
+    "body": "Hey everyone,\n\nI'm currently working on an AI-powered tool for automating customer support workflows, and I've hit a bit of a snag. The model I've been using is getting pretty complex, and while it performs well on paper, it's starting to slow down the application noticeably. I'm torn between optimizing the current model for speed or simplifying it to maintain performance without sacrificing too much accuracy.\n\nDoes anyone have experience with this? What strategies did you use to find the right balance? Are there any specific techniques or resources you'd recommend for optimizing model performance without overcomplicating things? Any insights would be greatly appreciated!",
+    "subreddit": "ebdev",
+    "angle": "ask for recommendations/resources on a specific sub-topic you're genuinely stuck on",
+    "url": "https://www.reddit.com/r/ebdev/submit?title=Need+Advice+on+Balancing+Model+Complexity+and+Performance+in+AI+Products&text=Hey+everyone%2C%0A%0AI%27m+currently+working+on+an+AI-powered+tool+for+automating+customer+support+workflows%2C+and+I%27ve+hit+a+bit+of+a+snag.+The+model+I%27ve+been+using+is+getting+pretty+complex%2C+and+while+it+performs+well+on+paper%2C+it%27s+starting+to+slow+down+the+application+noticeably.+I%27m+torn+between+optimizing+the+current+model+for+speed+or+simplifying+it+to+maintain+performance+without+sacrificing+too+much+accuracy.%0A%0ADoes+anyone+have+experience+with+this%3F+What+strategies+did+you+use+to+find+the+right+balance%3F+Are+there+any+specific+techniques+or+resources+you%27d+recommend+for+optimizing+model+performance+without+overcomplicating+things%3F+Any+insights+would+be+greatly+appreciated%21&selftext=true",
+    "status": "drafted",
+    "timestamp": 1788292807
+  },
+  {
     "title": "Free Mini-Critique: Elevate Your Portfolio with Fresh Eyes",
     "body": "Hey everyone,\n\nI've been diving deep into designing and building AI-powered products for a while now, and I've seen a fair share of portfolios, websites, and designs. If anyone's looking for a bit of feedback\u2014something different from the usual critique\u2014drop your work in the comments. I'll pick a few to give a quick, honest mini-critique on.\n\nWhether it's a sleek new UI for an AI tool, an automation workflow that needs that extra polish, or a SaaS product looking to stand out, I'm here to help. I'm particularly interested in seeing how others are tackling the unique challenges that come with AI integration.\n\nJust a heads up, this isn't a deep dive\u2014think of it as a quick, actionable insight that might just make your project pop. What are you working on that could use a fresh perspective? Let's make something great together.",
     "subreddit": "web_design",
