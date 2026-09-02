@@ -1,5 +1,14 @@
 [
   {
+    "title": "Critique Needed: My Approach to Streamlining AI Tool Onboarding",
+    "body": "Hey everyone, I've been working on an AI-powered productivity app and I'm at a point where I need some outside perspectives. Specifically, I'm curious about how I've structured the onboarding process for new users. I've tried to make it as intuitive as possible, with a mix of guided tours, tooltips, and a brief video tutorial. However, I'm wondering if it's too much or not enough. What are your thoughts on the balance between guiding users and letting them explore on their own? Any tips or critiques on how I can improve this would be greatly appreciated.",
+    "subreddit": "startups",
+    "angle": "ask the community to critique or roast something specific",
+    "url": "https://www.reddit.com/r/startups/submit?title=Critique+Needed%3A+My+Approach+to+Streamlining+AI+Tool+Onboarding&text=Hey+everyone%2C+I%27ve+been+working+on+an+AI-powered+productivity+app+and+I%27m+at+a+point+where+I+need+some+outside+perspectives.+Specifically%2C+I%27m+curious+about+how+I%27ve+structured+the+onboarding+process+for+new+users.+I%27ve+tried+to+make+it+as+intuitive+as+possible%2C+with+a+mix+of+guided+tours%2C+tooltips%2C+and+a+brief+video+tutorial.+However%2C+I%27m+wondering+if+it%27s+too+much+or+not+enough.+What+are+your+thoughts+on+the+balance+between+guiding+users+and+letting+them+explore+on+their+own%3F+Any+tips+or+critiques+on+how+I+can+improve+this+would+be+greatly+appreciated.&selftext=true",
+    "status": "drafted",
+    "timestamp": 1788335746
+  },
+  {
     "title": "Need Advice on Balancing Model Complexity and Performance in AI Products",
     "body": "Hey everyone,\n\nI'm currently working on an AI-powered tool for automating customer support workflows, and I've hit a bit of a snag. The model I've been using is getting pretty complex, and while it performs well on paper, it's starting to slow down the application noticeably. I'm torn between optimizing the current model for speed or simplifying it to maintain performance without sacrificing too much accuracy.\n\nDoes anyone have experience with this? What strategies did you use to find the right balance? Are there any specific techniques or resources you'd recommend for optimizing model performance without overcomplicating things? Any insights would be greatly appreciated!",
     "subreddit": "ebdev",
