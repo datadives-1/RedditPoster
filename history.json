@@ -1,5 +1,14 @@
 [
   {
+    "title": "Switching to Micro-Iterations Slashed My Development Time by 30%",
+    "body": "Hey all, \n\nI've been heads down on an AI-powered productivity tool for the past six months, and something clicked recently that I wanted to share. Previously, I was sticking to this rigid sprint cycle where I'd plan features weeks in advance. It felt organized, but man, was it slow. \n\nA month ago, I decided to try micro-iterations. Instead of planning out two weeks of work, I started focusing on small, manageable chunks\u2014like a single feature or bug fix at a time. I'd deploy these mini updates every couple of days. Not only did this make the workflow less overwhelming, but it also cut my development time by about 30%. \n\nThe best part? User feedback came in faster, and I could pivot or double down on features almost immediately. It's been a game-changer. Anyone else try something similar? How did it pan out for you?",
+    "subreddit": "userexperience",
+    "angle": "share a before/after or small win, framed as 'here's what changed my approach'",
+    "url": "https://www.reddit.com/r/userexperience/submit?title=Switching+to+Micro-Iterations+Slashed+My+Development+Time+by+30%25&text=Hey+all%2C+%0A%0AI%27ve+been+heads+down+on+an+AI-powered+productivity+tool+for+the+past+six+months%2C+and+something+clicked+recently+that+I+wanted+to+share.+Previously%2C+I+was+sticking+to+this+rigid+sprint+cycle+where+I%27d+plan+features+weeks+in+advance.+It+felt+organized%2C+but+man%2C+was+it+slow.+%0A%0AA+month+ago%2C+I+decided+to+try+micro-iterations.+Instead+of+planning+out+two+weeks+of+work%2C+I+started+focusing+on+small%2C+manageable+chunks%E2%80%94like+a+single+feature+or+bug+fix+at+a+time.+I%27d+deploy+these+mini+updates+every+couple+of+days.+Not+only+did+this+make+the+workflow+less+overwhelming%2C+but+it+also+cut+my+development+time+by+about+30%25.+%0A%0AThe+best+part%3F+User+feedback+came+in+faster%2C+and+I+could+pivot+or+double+down+on+features+almost+immediately.+It%27s+been+a+game-changer.+Anyone+else+try+something+similar%3F+How+did+it+pan+out+for+you%3F&selftext=true",
+    "status": "drafted",
+    "timestamp": 1788348566
+  },
+  {
     "title": "Critique Needed: My Approach to Streamlining AI Tool Onboarding",
     "body": "Hey everyone, I've been working on an AI-powered productivity app and I'm at a point where I need some outside perspectives. Specifically, I'm curious about how I've structured the onboarding process for new users. I've tried to make it as intuitive as possible, with a mix of guided tours, tooltips, and a brief video tutorial. However, I'm wondering if it's too much or not enough. What are your thoughts on the balance between guiding users and letting them explore on their own? Any tips or critiques on how I can improve this would be greatly appreciated.",
     "subreddit": "startups",
