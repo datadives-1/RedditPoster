@@ -1,5 +1,14 @@
 [
   {
+    "title": "Balancing Performance and User Experience in AI-Powered UIs",
+    "body": "Hey everyone,\n\nI\u2019ve been working on an AI-powered dashboard for a SaaS product and I\u2019m running into a bit of a conundrum. The challenge is finding the right balance between performance and user experience. The dashboard pulls in real-time data and uses AI to provide insights and recommendations. \n\nOn one hand, I want the UI to be super responsive and provide instant feedback as users interact with it. On the other hand, the AI processing in the background is resource-intensive and can sometimes cause lag. \n\nHas anyone else faced similar issues? What strategies have you used to ensure that the UI remains snappy while still leveraging the power of AI in the backend? Any tips or experiences you can share would be super helpful. Thanks!",
+    "subreddit": "ebdev",
+    "angle": "ask a genuine question to the subreddit about a challenge in this field",
+    "url": "https://www.reddit.com/r/ebdev/submit?title=Balancing+Performance+and+User+Experience+in+AI-Powered+UIs&text=Hey+everyone%2C%0A%0AI%E2%80%99ve+been+working+on+an+AI-powered+dashboard+for+a+SaaS+product+and+I%E2%80%99m+running+into+a+bit+of+a+conundrum.+The+challenge+is+finding+the+right+balance+between+performance+and+user+experience.+The+dashboard+pulls+in+real-time+data+and+uses+AI+to+provide+insights+and+recommendations.+%0A%0AOn+one+hand%2C+I+want+the+UI+to+be+super+responsive+and+provide+instant+feedback+as+users+interact+with+it.+On+the+other+hand%2C+the+AI+processing+in+the+background+is+resource-intensive+and+can+sometimes+cause+lag.+%0A%0AHas+anyone+else+faced+similar+issues%3F+What+strategies+have+you+used+to+ensure+that+the+UI+remains+snappy+while+still+leveraging+the+power+of+AI+in+the+backend%3F+Any+tips+or+experiences+you+can+share+would+be+super+helpful.+Thanks%21&selftext=true",
+    "status": "drafted",
+    "timestamp": 1790274365
+  },
+  {
     "title": "What I Learned from a Botched AI Chatbot Launch",
     "body": "Last year, I was part of a team launching an AI-powered customer service chatbot for an e-commerce site. We were super excited\u2014it was our first major AI project. Everything seemed smooth in testing, but when we went live, things quickly went south. Within hours, the bot was giving bizarre responses and even scaring away customers with its off-topic rants.\n\nIt took us a whole weekend to fix the mess and revert to the old system. The lesson? Always, always have a fallback plan. We thought our rigorous testing covered all bases, but real user interactions exposed flaws we never anticipated. Also, involving real users in beta testing earlier could have saved us from this public embarrassment. \n\nHas anyone else had a similar experience with an AI project gone wrong? How did you recover and what steps did you take to prevent future mishaps?",
     "subreddit": "FrontendDev",
