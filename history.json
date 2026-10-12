@@ -1,5 +1,14 @@
 [
   {
+    "title": "Best Practices for User Onboarding in AI-Powered SaaS?",
+    "body": "Hey all,\n\nI'm currently heads-down building a new AI-powered SaaS tool and I'm hitting a wall with the user onboarding process. Despite having a solid product, I'm seeing a high drop-off rate right after signup. I've tried a few standard approaches like guided tours and tooltips, but something isn't clicking.\n\nWhat I'm looking for are some fresh, out-of-the-box ideas or resources on creating an effective onboarding experience specifically for AI-driven products. Has anyone here dealt with similar challenges? What strategies did you find most effective in getting users comfortable and confident with the AI aspects of your tool?\n\nAny recommendations or war stories would be hugely appreciated. Thanks in advance!",
+    "subreddit": "design",
+    "angle": "ask for recommendations/resources on a specific sub-topic you're genuinely stuck on",
+    "url": "https://www.reddit.com/r/design/submit?title=Best+Practices+for+User+Onboarding+in+AI-Powered+SaaS%3F&text=Hey+all%2C%0A%0AI%27m+currently+heads-down+building+a+new+AI-powered+SaaS+tool+and+I%27m+hitting+a+wall+with+the+user+onboarding+process.+Despite+having+a+solid+product%2C+I%27m+seeing+a+high+drop-off+rate+right+after+signup.+I%27ve+tried+a+few+standard+approaches+like+guided+tours+and+tooltips%2C+but+something+isn%27t+clicking.%0A%0AWhat+I%27m+looking+for+are+some+fresh%2C+out-of-the-box+ideas+or+resources+on+creating+an+effective+onboarding+experience+specifically+for+AI-driven+products.+Has+anyone+here+dealt+with+similar+challenges%3F+What+strategies+did+you+find+most+effective+in+getting+users+comfortable+and+confident+with+the+AI+aspects+of+your+tool%3F%0A%0AAny+recommendations+or+war+stories+would+be+hugely+appreciated.+Thanks+in+advance%21&selftext=true",
+    "status": "drafted",
+    "timestamp": 1791842925
+  },
+  {
     "title": "How Tweaking One Button Color Skyrocketed Our Signup Rate",
     "body": "Hey everyone,\n\nI\u2019ve been heads-down building an AI-powered productivity tool lately, and I wanted to share a small but impactful change we made that significantly boosted our signup rate. We were struggling with conversions and decided to A/B test a few elements on our landing page. \n\nOne of the tests was changing the color of our primary signup button from a generic blue to a vibrant green. We hypothesized that green might convey a sense of action and growth better than blue. To our surprise, the green button increased our signup rate by 22% compared to the blue one. It was a simple change, but the results were undeniable.\n\nI\u2019m curious\u2014has anyone else seen similar results with small UI tweaks? What\u2019s the most minor change you\u2019ve made that had a major impact on user engagement or conversions? Let\u2019s share some insights!",
     "subreddit": "FrontendDev",
@@ -1789,14 +1798,5 @@
     "url": "https://www.reddit.com/r/startups/submit?title=Critique+Needed%3A+My+Approach+to+Streamlining+AI+Tool+Onboarding&text=Hey+everyone%2C+I%27ve+been+working+on+an+AI-powered+productivity+app+and+I%27m+at+a+point+where+I+need+some+outside+perspectives.+Specifically%2C+I%27m+curious+about+how+I%27ve+structured+the+onboarding+process+for+new+users.+I%27ve+tried+to+make+it+as+intuitive+as+possible%2C+with+a+mix+of+guided+tours%2C+tooltips%2C+and+a+brief+video+tutorial.+However%2C+I%27m+wondering+if+it%27s+too+much+or+not+enough.+What+are+your+thoughts+on+the+balance+between+guiding+users+and+letting+them+explore+on+their+own%3F+Any+tips+or+critiques+on+how+I+can+improve+this+would+be+greatly+appreciated.&selftext=true",
     "status": "drafted",
     "timestamp": 1788335746
-  },
-  {
-    "title": "Need Advice on Balancing Model Complexity and Performance in AI Products",
-    "body": "Hey everyone,\n\nI'm currently working on an AI-powered tool for automating customer support workflows, and I've hit a bit of a snag. The model I've been using is getting pretty complex, and while it performs well on paper, it's starting to slow down the application noticeably. I'm torn between optimizing the current model for speed or simplifying it to maintain performance without sacrificing too much accuracy.\n\nDoes anyone have experience with this? What strategies did you use to find the right balance? Are there any specific techniques or resources you'd recommend for optimizing model performance without overcomplicating things? Any insights would be greatly appreciated!",
-    "subreddit": "ebdev",
-    "angle": "ask for recommendations/resources on a specific sub-topic you're genuinely stuck on",
-    "url": "https://www.reddit.com/r/ebdev/submit?title=Need+Advice+on+Balancing+Model+Complexity+and+Performance+in+AI+Products&text=Hey+everyone%2C%0A%0AI%27m+currently+working+on+an+AI-powered+tool+for+automating+customer+support+workflows%2C+and+I%27ve+hit+a+bit+of+a+snag.+The+model+I%27ve+been+using+is+getting+pretty+complex%2C+and+while+it+performs+well+on+paper%2C+it%27s+starting+to+slow+down+the+application+noticeably.+I%27m+torn+between+optimizing+the+current+model+for+speed+or+simplifying+it+to+maintain+performance+without+sacrificing+too+much+accuracy.%0A%0ADoes+anyone+have+experience+with+this%3F+What+strategies+did+you+use+to+find+the+right+balance%3F+Are+there+any+specific+techniques+or+resources+you%27d+recommend+for+optimizing+model+performance+without+overcomplicating+things%3F+Any+insights+would+be+greatly+appreciated%21&selftext=true",
-    "status": "drafted",
-    "timestamp": 1788292807
   }
 ]
