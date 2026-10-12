@@ -1,5 +1,14 @@
 [
   {
+    "title": "Navigating the Fine Line Between AI Complexity and User-Friendly Design",
+    "body": "Hey everyone, I've been knee-deep in designing an AI-powered productivity tool, and I'm hitting a snag I'd love some insights on. The challenge? Striking the perfect balance between leveraging advanced AI capabilities and keeping the interface intuitive for non-tech-savvy users. \n\nRight now, I'm experimenting with a feature that uses machine learning to predict user tasks based on their past behavior. It's powerful stuff but feels like it might overwhelm users if not presented correctly. I've prototyped a few UI concepts, ranging from a straightforward, minimalist approach to a more detailed, customizable dashboard. \n\nMy question to you all is this: how do you handle introducing complex AI features without alienating your user base? Have you found a sweet spot where users feel empowered by the tech without being intimidated by it? Any war stories or tips from your experiences would be immensely helpful. Thanks in advance!",
+    "subreddit": "userexperience",
+    "angle": "ask a genuine question to the subreddit about a challenge in this field",
+    "url": "https://www.reddit.com/r/userexperience/submit?title=Navigating+the+Fine+Line+Between+AI+Complexity+and+User-Friendly+Design&text=Hey+everyone%2C+I%27ve+been+knee-deep+in+designing+an+AI-powered+productivity+tool%2C+and+I%27m+hitting+a+snag+I%27d+love+some+insights+on.+The+challenge%3F+Striking+the+perfect+balance+between+leveraging+advanced+AI+capabilities+and+keeping+the+interface+intuitive+for+non-tech-savvy+users.+%0A%0ARight+now%2C+I%27m+experimenting+with+a+feature+that+uses+machine+learning+to+predict+user+tasks+based+on+their+past+behavior.+It%27s+powerful+stuff+but+feels+like+it+might+overwhelm+users+if+not+presented+correctly.+I%27ve+prototyped+a+few+UI+concepts%2C+ranging+from+a+straightforward%2C+minimalist+approach+to+a+more+detailed%2C+customizable+dashboard.+%0A%0AMy+question+to+you+all+is+this%3A+how+do+you+handle+introducing+complex+AI+features+without+alienating+your+user+base%3F+Have+you+found+a+sweet+spot+where+users+feel+empowered+by+the+tech+without+being+intimidated+by+it%3F+Any+war+stories+or+tips+from+your+experiences+would+be+immensely+helpful.+Thanks+in+advance%21&selftext=true",
+    "status": "drafted",
+    "timestamp": 1791848424
+  },
+  {
     "title": "Best Practices for User Onboarding in AI-Powered SaaS?",
     "body": "Hey all,\n\nI'm currently heads-down building a new AI-powered SaaS tool and I'm hitting a wall with the user onboarding process. Despite having a solid product, I'm seeing a high drop-off rate right after signup. I've tried a few standard approaches like guided tours and tooltips, but something isn't clicking.\n\nWhat I'm looking for are some fresh, out-of-the-box ideas or resources on creating an effective onboarding experience specifically for AI-driven products. Has anyone here dealt with similar challenges? What strategies did you find most effective in getting users comfortable and confident with the AI aspects of your tool?\n\nAny recommendations or war stories would be hugely appreciated. Thanks in advance!",
     "subreddit": "design",
@@ -1789,14 +1798,5 @@
     "url": "https://www.reddit.com/r/userexperience/submit?title=Switching+to+Micro-Iterations+Slashed+My+Development+Time+by+30%25&text=Hey+all%2C+%0A%0AI%27ve+been+heads+down+on+an+AI-powered+productivity+tool+for+the+past+six+months%2C+and+something+clicked+recently+that+I+wanted+to+share.+Previously%2C+I+was+sticking+to+this+rigid+sprint+cycle+where+I%27d+plan+features+weeks+in+advance.+It+felt+organized%2C+but+man%2C+was+it+slow.+%0A%0AA+month+ago%2C+I+decided+to+try+micro-iterations.+Instead+of+planning+out+two+weeks+of+work%2C+I+started+focusing+on+small%2C+manageable+chunks%E2%80%94like+a+single+feature+or+bug+fix+at+a+time.+I%27d+deploy+these+mini+updates+every+couple+of+days.+Not+only+did+this+make+the+workflow+less+overwhelming%2C+but+it+also+cut+my+development+time+by+about+30%25.+%0A%0AThe+best+part%3F+User+feedback+came+in+faster%2C+and+I+could+pivot+or+double+down+on+features+almost+immediately.+It%27s+been+a+game-changer.+Anyone+else+try+something+similar%3F+How+did+it+pan+out+for+you%3F&selftext=true",
     "status": "drafted",
     "timestamp": 1788348566
-  },
-  {
-    "title": "Critique Needed: My Approach to Streamlining AI Tool Onboarding",
-    "body": "Hey everyone, I've been working on an AI-powered productivity app and I'm at a point where I need some outside perspectives. Specifically, I'm curious about how I've structured the onboarding process for new users. I've tried to make it as intuitive as possible, with a mix of guided tours, tooltips, and a brief video tutorial. However, I'm wondering if it's too much or not enough. What are your thoughts on the balance between guiding users and letting them explore on their own? Any tips or critiques on how I can improve this would be greatly appreciated.",
-    "subreddit": "startups",
-    "angle": "ask the community to critique or roast something specific",
-    "url": "https://www.reddit.com/r/startups/submit?title=Critique+Needed%3A+My+Approach+to+Streamlining+AI+Tool+Onboarding&text=Hey+everyone%2C+I%27ve+been+working+on+an+AI-powered+productivity+app+and+I%27m+at+a+point+where+I+need+some+outside+perspectives.+Specifically%2C+I%27m+curious+about+how+I%27ve+structured+the+onboarding+process+for+new+users.+I%27ve+tried+to+make+it+as+intuitive+as+possible%2C+with+a+mix+of+guided+tours%2C+tooltips%2C+and+a+brief+video+tutorial.+However%2C+I%27m+wondering+if+it%27s+too+much+or+not+enough.+What+are+your+thoughts+on+the+balance+between+guiding+users+and+letting+them+explore+on+their+own%3F+Any+tips+or+critiques+on+how+I+can+improve+this+would+be+greatly+appreciated.&selftext=true",
-    "status": "drafted",
-    "timestamp": 1788335746
   }
 ]
